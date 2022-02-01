@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="20dp"
+    android:layout_marginTop="20dp">
+
+    <TextView
+        android:id="@+id/tv_principal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Principal : "
+        android:layout_margin="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <EditText
+        android:id="@+id/et_principal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_principal"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_rate"
+        android:text="Interest Rate : "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_principal"
+        android:layout_margin="8dp"/>
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/tv_rate"
+        android:id="@+id/et_rate"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/et_principal"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_years"
+        android:text="Years : "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_rate"
+        android:layout_margin="8dp"
+        />
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/tv_years"
+        android:id="@+id/et_years"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@+id/et_rate"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:id="@+id/button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_years"
+        android:layout_marginTop="20dp"
+        android:onClick="calculate"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/interest"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        android:layout_marginTop="20dp"
+        android:text="interrest"
+        android:visibility="invisible"
+        />
+
+
+    <TextView
+        android:textSize="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/maturity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/interest"
+        android:layout_marginTop="20dp"
+        android:text="maturity"
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:id="@+id/second_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show yearly interest"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/maturity"
+        android:layout_marginTop="20dp"
+        android:visibility="invisible"
+        android:onClick="nextActivity"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
